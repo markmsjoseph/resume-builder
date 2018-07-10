@@ -1,0 +1,126 @@
+
+@mixin desktopView(){
+  //apply styles when the browser is atleast 50rem
+  @media (min-width:50rem){
+    @content
+  }
+
+}
+
+
+.page-content {
+  display: flex;
+  height: $page-content-height;
+  margin: 0 auto;
+  max-width: $site-max-width;
+  padding: $large-space $space;
+}
+
+
+
+//******************************************** editor ********************************************
+.page-content__main {
+  display: flex;
+  width: $page-content-main-width;
+
+
+}
+
+.editor {
+  background-color: white;
+  border: 1px solid $grey;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $large-space;
+  margin: 10px;
+
+}
+
+.editor__title {
+  border: none;
+  border-bottom: 2px solid $grey;
+  font-size: $large-font-size;
+  margin-bottom: $large-space;
+  outline: none;
+  padding: $input-spacing;
+}
+
+.editor__body {
+   flex-grow: 1;
+   font-weight: 300;
+   margin-bottom: $large-space;
+   outline: none;
+   padding: $input-spacing;
+   resize: none;
+}
+
+.editor__message {
+  text-align: center;
+  margin: $large-space * 2;
+  font-style: italic;
+}
+//******************************************** end editor ********************************************
+
+//******************************************** sidebar ********************************************
+
+
+.page-content__sidebar {
+
+  width:100vw;
+  position:fixed;
+  top:$header-height;
+  left: -100vw;
+  transition: left .3s ease;
+  bottom: 0;
+  z-index: 1;
+
+  //apply styles when the browser is larger than the min width
+  @include desktopView{
+    position: static;
+    left:0;
+    display:flex;
+    color:red;
+    width: $page-content-sidebar-width;
+    padding-right: $large-space;
+  }
+
+}
+
+.page-content__sidebar-menu {
+
+  width:100vw;
+  position:fixed;
+  top:$header-height;
+  left: -100vw;
+  transition: left .3s ease;
+  bottom: 0;
+  z-index: 1;
+
+  //apply styles when the browser is larger than the min width
+  @include desktopView{
+    position: static;
+    left:0;
+    
+    color:red;
+    display: block;
+    width: 100vw;
+    padding-right: $large-space;
+  }
+
+}
+
+//if the nav is open when we expand to desktop mode, we change the isopen styles to suit desktop view
+.is-nav-open .page-content__sidebar-menu{
+
+    left:0;
+    @include desktopView{
+    display: block;
+    width: 100vw;
+    }
+}
+//if there is the class is-nav-open present, style the sidebar, if is-nav-open never exist, the styles will never be applieds
+.is-nav-open .page-content__sidebar{
+    left:0;
+}
+//******************************************** end sidebar ********************************************

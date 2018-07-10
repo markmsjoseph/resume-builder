@@ -1,0 +1,231 @@
+
+@mixin desktopView(){
+  //apply styles when the browser is atleast 50rem
+  @media (min-width:50rem){
+    @content
+  }
+
+}
+@mixin smallestPhoneSizes(){
+  @media (max-width:360px){
+      @content
+  }
+}
+
+//target screens that are only between 360 and 425 px
+@mixin mediumSizedPhones(){
+  @media only screen and (max-width: 425px) and (min-width: 360px)  {
+      @content
+  }
+}
+
+@mixin tablets(){
+  @media only screen and (max-width: 768px) and (min-width: 425px)  {
+      @content
+  }
+}
+
+
+
+//******************************************** EMPTY ITEM ********************************************
+.empty-item{
+  font-style: italic;
+  padding: $space;
+  text-align: center;
+}
+
+//******************************************** ITEM LIST HEADER ********************************************
+.item-list__header{
+  display: flex;
+  flex-direction: column;
+  padding: $large-space;
+}
+
+//******************************************** ITEM LIST ********************************************
+.item-list {
+  background-color: white;
+  border: 3px solid #7f39fb;
+  overflow-y: scroll;
+  width: 100%;
+  -webkit-overflow-scrolling:touch;//momuntum scrolling
+}
+
+//******************************************** ITEM ********************************************
+  .item {
+    border-left:  $itemBorderWidth solid transparent;
+    cursor: pointer;
+    padding: $space;
+    transition: background-color .3s ease, border-left .3s ease;
+
+  }
+
+  .item:hover{
+    background-color: $light-grey;
+    border-left: $itemBorderWidth solid $grey;
+  }
+
+  .item--selected, .item--selected:hover{
+    background-color: $light-grey;
+    border-left: $itemBorderWidth solid $medium-purple;
+  }
+
+  .item__title{
+    font-weight: normal;
+    font-size: $base-font-size;
+    margin-bottom: .4rem;
+      color:$light-purple;
+  }
+
+  .item--selected .item__title{
+    color:$medium-purple;
+    font-weight: bold;
+  }
+
+  .item__date{
+  color: $dark-grey;
+  margin: 0;
+}
+
+//******************************************** PUBLIC ITEM ********************************************
+.public-item{
+
+  padding-bottom: 30px;
+      margin: 60px 0px 40px 0px;
+      border: 3px solid #615f5f;
+      padding-left: 5px;
+padding-right: 5px;
+  @include smallestPhoneSizes{
+
+  }
+
+  @include mediumSizedPhones{
+
+  }
+
+  @include tablets{
+
+  }
+
+  @include desktopView{
+    padding: 30px;
+    margin: 30px;
+    border: 3px solid #e8e8e8;
+
+  }
+}
+
+.public_item_container{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  @include smallestPhoneSizes{
+
+  }
+
+  @include mediumSizedPhones{
+
+  }
+
+  @include tablets{
+
+  }
+
+  @include desktopView{
+      width: 50%;
+
+  }
+}
+.noteBody{
+  font-family: cursive;
+}
+.notePostedBy{
+  text-align: right;
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 12px;
+      color: #7f39fb;
+}
+
+
+
+//******************************************** COMMENTS ITEM ********************************************
+.comment{
+
+max-height: 300px;
+overflow-y: scroll;
+  background-color: #efefef;
+      padding: 5px;
+      margin: 5px;
+      border: 1px solid #bfbfbf;
+          border-radius: 9px;
+      @include desktopView{
+          padding: 10px;
+
+      }
+}
+.comment-user{
+  color: #6200ee;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.comment-message{
+  text-align: left;
+      font-family: cursive;
+}
+.comment-textbox{
+  width: 100%;
+}
+.comment-form{
+  margin-bottom: 50px;
+      background-color: #fafafa;
+      /* border: solid #d8d7d7; */
+      height: 130px;
+      padding: 10px;
+}
+.display-comments{
+  background-color: red;
+}
+.hide-comments{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}

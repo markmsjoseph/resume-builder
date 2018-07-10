@@ -1,0 +1,130 @@
+$purple:#6924c4;
+
+@mixin desktopView(){
+  //apply styles when the browser is atleast 50rem
+  @media (min-width:50rem){
+    @content
+  }
+
+}
+@mixin smallestPhoneSizes(){
+  @media (max-width:360px){
+      @content
+  }
+}
+
+//target screens that are only between 360 and 425 px
+@mixin mediumSizedPhones(){
+  @media only screen and (max-width: 425px) and (min-width: 360px)  {
+      @content
+  }
+}
+
+@mixin tablets(){
+  @media only screen and (max-width: 768px) and (min-width: 425px)  {
+      @content
+  }
+}
+
+
+
+
+
+
+.modal__style{
+  top: 50%;
+   left  : 50%;
+   right : auto;
+   bottom : auto;
+   margin-right: -50%;
+   transform : translate(-50%, -50%);
+}
+
+.ReactModal__Content.ReactModal__Content--after-open{
+  height:300px;
+  width:300px;
+  color:red;
+  text-align:center;
+  color: white;
+    font-size: 18px;
+    font-weight: 600;
+    @include smallestPhoneSizes{
+
+    }
+
+    @include mediumSizedPhones{
+
+    }
+
+    @include tablets{
+
+    }
+
+    @include desktopView{
+        width:600px;
+    }
+
+
+}
+
+.ReactModal__Content.ReactModal__Content--after-open button{
+  font-size: 14px;
+  border: 3px solid #ffa401;
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fefeff;
+  color: #6924c4;
+  margin: 15px;
+}
+.ReactModal__Content.ReactModal__Content--after-open button:hover{
+  font-size: 14px;
+  border: 3px solid #ffa401;
+  color: $purple;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: white;
+  color: #6924c4;
+  margin: 15px;
+}
+
+.ReactModal__Content {
+  position: fixed !important;
+   top: 30%!important;
+
+   margin-top: -50px!important;
+   // margin-left: -300px!important;
+   margin-top: -50px!important;
+   margin-left: auto;
+ margin-right: auto;
+  border: 10px solid rgb(255, 164, 1);
+  background: rgb(105, 36, 196) !important;
+  overflow: auto;
+  border-radius: 15px;
+  outline: none;
+  padding: 20px;
+
+  @include smallestPhoneSizes{
+
+  }
+
+  @include mediumSizedPhones{
+
+  }
+
+  @include tablets{
+
+  }
+
+  @include desktopView{
+    top: 50%!important;
+    left: 50%!important;
+    margin-top: -50px!important;
+    margin-left: -300px!important;
+  }
+
+
+ }
+ .ReactModal__Overlay.ReactModal__Overlay--after-open{
+   z-index: 999;
+ }

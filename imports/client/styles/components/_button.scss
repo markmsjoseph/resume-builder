@@ -1,0 +1,80 @@
+@mixin smallestPhoneSizes(){
+  @media (max-width:360px){
+      @content
+  }
+}
+
+
+
+.button {
+  background-color:$lightPurpleish;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-transform: uppercase;
+
+}
+
+.button-login{
+    background-color: #ff0d5f;
+border: none;
+color: white;
+cursor: pointer;
+font-size: 14px;
+line-height: 1.2;
+margin-bottom: 10px;
+padding: 11px;
+border-radius: 46px;
+width: 70%;
+text-transform: uppercase;
+}
+
+
+.button-comment {
+  background-color: $button-bg;
+  border: none;
+  color: $button-color;
+  cursor: pointer;
+  font-size: $base-font-size;
+  line-height: 1.2;
+  margin-bottom: $space;
+  padding: $input-spacing;
+  text-transform: uppercase;
+  float: right;
+
+}
+
+
+.button--secondary {
+  background: $medium-purple;
+  border: 1px solid $button-secondary-border-color;
+  color: white;
+}
+
+
+.button--logout {
+  background-color: $light-purple;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: $base-font-size;
+  line-height: 1.2;
+  padding: 5px;
+  text-transform: uppercase;
+  position: absolute;
+      right: 2rem;
+      top: 4rem;
+}
+.delete-button{
+  width:50%;
+  @include smallestPhoneSizes{
+    width:100%;
+  }
+}
+.editButtons{
+
+}
