@@ -1,12 +1,11 @@
 import React from 'react';
-
+import H1Component from './H1Component';
 
 //NOTE DISPLAYS ONLY IF THERE ARE NO NOTES
 const NoteListEmptyItem = () => {
   return (
    <div className = " ">
-
-      <p className = "empty-item">Create a poem to get started!</p>
+<H1Component />
     </div>
   );
 };

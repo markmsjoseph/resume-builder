@@ -89,40 +89,47 @@ export default class H1Component extends React.Component {
                }
 
                return (
-                 <div className="h1Component">
+                         <div className="h1Component-Container">
 
-                   <h3> Color</h3>
-                   <SketchPicker
-                     color={ this.state.background }
-                     onChangeComplete={ this.handleColorChange }
-                   />
+                                    <div className="h1Component-wrapper">
+                                             <h3> Color</h3>
+                                             <SketchPicker
+                                               color={ this.state.background }
+                                               onChangeComplete={ this.handleColorChange }
+                                             />
+                                    </div>
 
-                   <h3>Font Family</h3>
-                   <FontPicker
-                     apiKey="AIzaSyDqOz25fk8em_Fd93bfWZLcoq39_H7uKPI"
-                     activeFont={this.state.activeFont}
-                     onChange={this.handleFontFamilyChange}
-                   />
+                                    <div className="h1Component-wrapper">
+                                             <h3>Font Family</h3>
+                                             <FontPicker
+                                               apiKey="MY API KEY"
+                                               activeFont={this.state.activeFont}
+                                               onChange={this.handleFontFamilyChange}
+                                             />
+                                  </div>
+
+                                  <div className="h1Component-wrapper">
+                                             <h3>Font Size</h3>
+                                             <Slider min={0}
+                                               max={100}
+                                               value={this.state.value}
+                                               onChange={this.handleFontSizeChange}
+                                             />
+                                             <div className='value'>{this.state.value}</div>
+                                  </div>
+
+                                  <div className="h1Component-wrapper">
+                                           <button className = "h1Component-button" onClick={this.makeFontBold}>Bold </button>
+                                           <button className = "h1Component-button" onClick={this.makeTextItalic}>Italic </button>
+                                           <button className = "h1Component-button" onClick={this.makeTextUnderline}>Underline </button>
+                                  </div>
 
 
-                   <h3>Font Size</h3>
-                   <Slider min={0}
-                     max={100}
-                     value={this.state.value}
-                     onChange={this.handleFontSizeChange}
-                   />
-                   <div className='value'>{this.state.value}</div>
-                   
+                                   <p style={style}>
+                                     Styles will be applied to this text.
+                                   </p>
 
-                   <button onClick={this.makeFontBold}>Bold </button>
-                   <button onClick={this.makeTextItalic}>Italic </button>
-                   <button onClick={this.makeTextUnderline}>Underline </button>
-
-                   <p style={style}>
-                     Styles will be applied to this text.
-                   </p>
-
-                 </div>
+                         </div>
                );
    }//end render
 

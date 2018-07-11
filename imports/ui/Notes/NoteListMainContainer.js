@@ -8,6 +8,7 @@ import NoteListEmptyItem from './NoteListEmptyItem';
 import {Session} from 'meteor/session';
 import { createContainer } from 'meteor/react-meteor-data';
 
+
 //NOTE displays the noteliste header, note list iteems, and editor components
 export const NoteListMainContainer = (props) => {
   return (
@@ -24,7 +25,7 @@ export const NoteListMainContainer = (props) => {
                     </div>
 
                     <div className="page-content__main">
-                      
+
                     </div>
           </div>
   );

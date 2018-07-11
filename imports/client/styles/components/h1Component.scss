@@ -1,0 +1,23 @@
+
+.h1Component-Container{
+  background: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 41px;
+  align-items: stretch;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1Component-wrapper{
+  width: 100%;
+  border: solid 1px green;
+  margin: 10px;
+}
+
+.h1Component-button{
+  width:100%;
+}

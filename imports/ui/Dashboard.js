@@ -49,7 +49,7 @@ export default class Dashboard extends React.Component {
                                         <p className = "header__logged-in-as">Logged in as:{this.state.username} </p>
                                   </div>
                         </div>
-                        <H1Component/>
+                      
                         <div className="allContainer">
                                   <NoteListMainContainer />
                         </div>
