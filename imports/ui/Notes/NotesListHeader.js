@@ -25,8 +25,7 @@ export const NoteListHeader = (props) => {
 
   return (
           <div className="item-list__header">
-            <h3 className = "header__linksAllPoems"> <Link to ="/allnotes">View Public Poems</Link> </h3>
-              <button className="button" onClick={createNoteClicked}>Create Poem</button>
+            
           </div>
   );
 

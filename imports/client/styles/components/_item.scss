@@ -46,7 +46,9 @@
   background-color: white;
   border: 3px solid #7f39fb;
   overflow-y: scroll;
-  width: 100%;
+  position: absolute;
+      left: 10px;
+      width: 350px;
   -webkit-overflow-scrolling:touch;//momuntum scrolling
 }
 
