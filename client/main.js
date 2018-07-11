@@ -8,7 +8,7 @@ import {Session} from 'meteor/session';
 import Dashboard from '../imports/ui/Dashboard';
 import NotFound from '../imports/ui/NotFound';
 import Login from '../imports/ui/Login';
-import PublicNotes from '../imports/ui/PublicNotes';
+
 
 export const history = createHistory();
 
@@ -26,7 +26,7 @@ const routes = (
                 <Route path="/"  exact={true} render={ (props) => <Login priavteOrPublic= {"publicRoute"} {...props} />} />
                 <Route path="/dashboard" exact={true} render={ (props) => <Dashboard priavteOrPublic= {"privateRoute"} {...props} />} />
                 <Route path="/dashboard/:id" exact={true} render={ (props) => <Dashboard priavteOrPublic= {"privateRoute"} {...props} />} />
-                <Route path="/allnotes"  exact={true} render={ (props) => <PublicNotes priavteOrPublic= {"privateRoute"} {...props} />} />
+
                 <Route path="*" component={NotFound} />
             </Switch>
   </Router>

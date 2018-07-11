@@ -87,7 +87,7 @@ export default class Login extends React.Component {
                                    <TabList className="tabtop">
 
 
-                                     <h1 className = "chatAppHeader"> Poetry App </h1>
+                                     <h1 className = "chatAppHeader"> Resume Builder </h1>
 
                                     <CSSTransitionGroup transitionName="tabLoad" transitionAppear={true} transitionAppearTimeout={800}  transitionLeave={false} >
                                            <Tab>Sign In</Tab>

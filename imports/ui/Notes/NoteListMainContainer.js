@@ -5,7 +5,6 @@ import { Meteor } from 'meteor/meteor';
 import NotesListHeader from './NotesListHeader';
 import NoteListItem from './NoteListItem';
 import NoteListEmptyItem from './NoteListEmptyItem';
-import Editor from './EditNotes';
 import {Session} from 'meteor/session';
 import { createContainer } from 'meteor/react-meteor-data';
 
@@ -25,7 +24,7 @@ export const NoteListMainContainer = (props) => {
                     </div>
 
                     <div className="page-content__main">
-                        <Editor/>
+                      
                     </div>
           </div>
   );
