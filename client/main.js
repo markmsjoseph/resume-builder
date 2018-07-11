@@ -25,7 +25,6 @@ const routes = (
 
                 <Route path="/"  exact={true} render={ (props) => <Login priavteOrPublic= {"publicRoute"} {...props} />} />
                 <Route path="/dashboard" exact={true} render={ (props) => <Dashboard priavteOrPublic= {"privateRoute"} {...props} />} />
-                <Route path="/dashboard/:id" exact={true} render={ (props) => <Dashboard priavteOrPublic= {"privateRoute"} {...props} />} />
 
                 <Route path="*" component={NotFound} />
             </Switch>

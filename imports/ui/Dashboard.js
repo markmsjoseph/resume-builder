@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PrivateHeader from './PrivateHeader';
-import NoteListMainContainer from './Notes/NoteListMainContainer';
 import {Session} from 'meteor/session';
 import { history } from '../../client/main.js';
-import H1Component from './Notes/H1Component';
+import Container from './Notes/Container';
 
 
 
@@ -49,9 +48,9 @@ export default class Dashboard extends React.Component {
                                         <p className = "header__logged-in-as">Logged in as:{this.state.username} </p>
                                   </div>
                         </div>
-                      
+
                         <div className="allContainer">
-                                  <NoteListMainContainer />
+                                  <Container />
                         </div>
                   </div>
               );

@@ -17,6 +17,7 @@
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-collapsible": "^2.2.0",
     "react-color": "^2.14.1",
+    "react-contenteditable": "^2.1.0",
     "react-dom": "^16.4.0",
     "react-dropzone": "^3.0.0",
     "react-flip-move": "^3.0.1",

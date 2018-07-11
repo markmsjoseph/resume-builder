@@ -1,11 +1,12 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
+
 import { SketchPicker } from 'react-color';
 import FontPicker from 'font-picker-react';
 import Slider from 'react-rangeslider';
 
 
-export default class H1Component extends React.Component {
+export default class SidebarEditor extends React.Component {
 
     constructor (props, context) {
         super(props, context)
